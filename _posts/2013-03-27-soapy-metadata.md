@@ -3,8 +3,6 @@ layout: post
 title: soapy metadata
 ---
 
-# soapy metadata
-
 My internet radio station datafruits.fm needed metadata in its audio stream.
 I wanted to make a cool hack to set metadata using liquidsoap. This would solve 2 problems:
 
