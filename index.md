@@ -3,7 +3,7 @@ layout: page
 title: ":3"
 tagline: 
 ---
-<img src='https://en.gravatar.com/userimage/4440149/0b74ccf6e05308fcbb8a30aa0e4bee96.jpg'>
+<img src='http://gravatar.com/avatar/9503dcaf4671f85821bf7fc36897e16b?s=200'>
 {% include JB/setup %}
 
 {% for post in site.posts %}
