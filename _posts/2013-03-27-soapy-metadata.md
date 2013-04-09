@@ -36,13 +36,14 @@ r.publish "metadata", meta
 
 ### radio.liq
 
-{% highlight ruby %}
+{% highlight %}
 source = on_metadata(pub_metadata, source)
 
-def on_metadata(m) =
-log("metadata changed: #{m}")
-result = get_process_lines("./pub_metadata #{m}")
-log("pub_metadata: #{result}")
+def pub_metadata(m) =
+  log("metadata changed: #{m}")
+  title = m["title"]
+  result = get_process_lines("./pub_metadata.rb #{m}")
+  log("pub_metadata: #{result}")
 end
 {% endhighlight %}
 
