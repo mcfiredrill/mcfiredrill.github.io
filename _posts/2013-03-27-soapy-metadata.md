@@ -9,32 +9,36 @@ My internet radio station datafruits.fm needed metadata in its audio stream.
 I wanted to make a cool hack to set metadata using liquidsoap. This would solve 2 problems:
 
 * dj's are unable to set metadata with their clients, so I'll do it for them when they authenticate.
-* the <audio> tag is unable to read the metadata from the stream. I'll have to get it some other way.
+* the `<audio>` tag is unable to read the metadata from the stream. I'll have to get it some other way.
 
-I'll have liquidsoap call a ruby script when the metadata in the stream changes, using `on_meta`.
+I'll have liquidsoap call a ruby script when the metadata in the stream changes, using `on_meta`. We'll store
+the metadata in redis, using pub-sub. Then I'll set up a controller to relay this metadata.
 
-## pub_metadata.rb
+As a bonus I now effectively have an api for getting the current song that I can
+use in my mobile apps for this radio.
+
+### pub_metadata.rb
 
 {% highlight ruby %}
 # adopted from https://github.com/gorsuch/sinatra-streaming-example/blob/master/worker.rb
- 
+
 require 'redis'
- 
+
 redis_url = ENV["REDISTOGO_URL"] || "redis://localhost:6379"
 uri = URI.parse(redis_url)
 r = Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)
- 
+
 meta = ARGV[0]
- 
+
 puts "setting metadata..."
 r.publish "metadata", meta
 {% endhighlight %}
 
-## radio.liq
+### radio.liq
 
 {% highlight ruby %}
 source = on_metadata(pub_metadata, source)
- 
+
 def on_metadata(m) =
 log("metadata changed: #{m}")
 result = get_process_lines("./pub_metadata #{m}")
@@ -42,12 +46,10 @@ log("pub_metadata: #{result}")
 end
 {% endhighlight %}
 
-I wanted to use streaming in Sinatra to update the metadata quickly, instead of polling. 
+I wanted to use streaming in Sinatra to update the metadata quickly, instead of polling.
 
-## sinatra_app.rb
+### sinatra_app.rb
 {% highlight ruby %}
-# https://github.com/gorsuch/sinatra-streaming-example/blob/master/web.rb
-
 require 'redis'
 require 'sinatra'
 
@@ -70,6 +72,17 @@ get '/metadata' do
 end
 {% endhighlight %}
 
+Then we can do something like this in the javascript:
+
+{% highlight javascript %}
+var source = new EventSource('/metadata');
+source.addEventListener('refresh', function(e){
+  console.log("got sse");
+  console.log(e.data);
+  $('#nowplaying').html(e.data);
+});
+{% endhighlight %}
+
 This was a little bit more difficult to manage than I expected. It was working
 sporadically, and it turns out you need to manage all the connections by hand,
 you can't just code one connection and expect it to work.
@@ -78,3 +91,50 @@ So I decidedly to go with the certainly not as cool solution of using polling.
 However I think its a perfectly fine solution for this situation. Polling is
 simple, fairly cheap, and as far as this situation goes, truly 'live' updating
 of the metadata is not really necessary.
+
+So I ended up just using a regular redis key.
+
+### pub_metadata.rb
+
+{% highlight ruby %}
+# adopted from https://github.com/gorsuch/sinatra-streaming-example/blob/master/worker.rb
+
+require 'redis'
+
+redis_url = ENV["REDISTOGO_URL"] || "redis://localhost:6379"
+uri = URI.parse(redis_url)
+r = Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)
+
+meta = ARGV[0]
+
+puts "setting metadata..."
+puts r.set "currentsong", meta
+{% endhighlight %}
+
+We can just set up a normal get route to get the key.
+
+### sinatra_app.rb
+
+{% highlight ruby %}
+  redis_url = ENV["REDISTOGO_URL"] || "redis://localhost:6379"
+  uri = URI.parse(redis_url)
+  set :redis, Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)
+
+  get '/metadata' do
+    settings.redis.get("current-song").to_s
+  end
+{% endhighlight %}
+
+A simple set setInterval will work for polling and updating the html.
+
+{% highlight javascript %}
+  setInterval(function(){
+    $.get("/metadata",function(data){
+      console.log("got data: "+data);
+      $('#nowplaying').html(data);
+    });
+  },5000);
+{% endhighlight %}
+
+While not as cool, this is a lot easier to work with at the moment. Perhaps I
+can think of other radio data I could store in redis and attach an API to from my app.
