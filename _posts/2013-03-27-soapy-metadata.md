@@ -1,6 +1,7 @@
 ---
 layout: post
 title: soapy metadata
+tags: [liquidsoap, icecast, redis, ruby, streaming]
 ---
 
 My internet radio station datafruits.fm needed metadata in its audio stream.
@@ -17,7 +18,7 @@ use in my mobile apps for this radio.
 
 ### pub_metadata.rb
 
-``` ruby
+```ruby
 # adopted from https://github.com/gorsuch/sinatra-streaming-example/blob/master/worker.rb
 
 require 'redis'
@@ -48,7 +49,7 @@ end
 I wanted to use streaming in Sinatra to update the metadata quickly, instead of polling.
 
 ### sinatra_app.rb
-``` ruby
+```ruby
 require 'redis'
 require 'sinatra'
 
@@ -73,7 +74,7 @@ end
 
 Then we can do something like this in the javascript:
 
-``` javascript
+```javascript
 var source = new EventSource('/metadata');
 source.addEventListener('refresh', function(e){
   console.log("got sse");
@@ -95,7 +96,7 @@ So I ended up just using a regular redis key.
 
 ### pub_metadata.rb
 
-``` ruby
+```ruby
 # adopted from https://github.com/gorsuch/sinatra-streaming-example/blob/master/worker.rb
 
 require 'redis'
@@ -114,7 +115,7 @@ We can just set up a normal get route to get the key.
 
 ### sinatra_app.rb
 
-``` ruby
+```ruby
   redis_url = ENV["REDISTOGO_URL"] || "redis://localhost:6379"
   uri = URI.parse(redis_url)
   set :redis, Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)
@@ -126,7 +127,7 @@ We can just set up a normal get route to get the key.
 
 A simple set setInterval will work for polling and updating the html.
 
-``` javascript
+```javascript
   setInterval(function(){
     $.get("/metadata",function(data){
       console.log("got data: "+data);
