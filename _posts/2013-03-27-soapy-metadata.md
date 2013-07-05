@@ -35,7 +35,7 @@ r.publish "metadata", meta
 
 ### radio.liq
 
-``` ruby
+{% highlight ruby %}
 source = on_metadata(pub_metadata, source)
 
 def pub_metadata(m) =
@@ -44,7 +44,7 @@ def pub_metadata(m) =
   result = get_process_lines("./pub_metadata.rb #{m}")
   log("pub_metadata: #{result}")
 end
-```
+{% endhighlight %}
 
 I wanted to use streaming in Sinatra to update the metadata quickly, instead of polling.
 
