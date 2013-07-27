@@ -1,6 +1,6 @@
 ---
 layout: page
-title: ":3"
+title: "Tony Miller"
 tagline:
 ---
 <img src='/assets/themes/twitter/images/me.jpg'>
