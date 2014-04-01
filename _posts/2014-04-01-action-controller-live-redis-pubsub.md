@@ -19,7 +19,7 @@ I ran into a few caveats along the way. First off is some good news, an
 implementation of Aaron's SSE emitter class has been merged into Rails, so you
 no longer need to write your own.
 
-```Ruby
+```
 sse = SSE.new(response.stream)
 ```
 
