@@ -1,46 +1,32 @@
-# Jekyll-Bootstrap
-
-The quickest way to start and publish your Jekyll powered blog. 100% compatible with GitHub pages
-
-## Usage
-
-For all usage and documentation please see: <http://jekyllbootstrap.com>
-
-## Version
-
-0.3.0 - stable and versioned using [semantic versioning](http://semver.org/).
-
-**NOTE:** 0.3.0 introduces a new theme which is not backwards compatible in the sense it won't _look_ like the old version.
-However, the actual API has not changed at all.
-You might want to run 0.3.0 in a branch to make sure you are ok with the theme design changes.
-
-## Contributing 
-
-This repository tracks 2 projects:
-
-- **Jekyll-Bootstrap Framework.**  
-  The framework for which users should clone and build their blog on top of is available in the master branch.
-  
-  To contribute to the framework please make sure to checkout your branch based on `jb-development`!!
-  This is very important as it allows me to accept your pull request without having to publish a public version release.
-  
-  Small, atomic Features, bugs, etc.   
-  Use the `jb-development` branch but note it will likely change fast as pull requests are accepted.   
-  Please rebase as often as possible when working.   
-  Work on small, atomic features/bugs to avoid upstream commits affecting/breaking your development work.
-  
-  For Big Features or major API extensions/edits:   
-  This is the one case where I'll accept pull-requests based off the master branch.
-  This allows you to work in isolation but it means I'll have to manually merge your work into the next public release.
-  Translation : it might take a bit longer so please be patient! (but sincerely thank you).
- 
-- **Jekyll-Bootstrap Documentation Website.**    
-  The documentation website at <http://jekyllbootstrap.com> is maintained in the gh-pages branch.
-  Please fork and contribute documentation additions to this branch only.
-
-The master and gh-pages branch do not share the same ancestry. Please treat them as completely separate git repositories!
+#Thinny - The Infinite's Nymphet
 
 
-## License
+----
 
-[MIT](http://opensource.org/licenses/MIT)
+###Attention: We need a "share to social networks" functionality.
+Do you have any idea of how we should implement this?
+Please, [let me know](http://github.com/camporez/camporez.github.io/issues/11)!
+
+My thougths are:
+- the "share to social networks" just need to be visible on desktop, because mobile browsers already has this.
+- it needs to be easy accessible by the end of the article.
+If you have some idea, leave a comment [on the issue](http://github.com/camporez/camporez.github.io/issues/11).
+
+----
+
+##About
+Thinny is a beautiful theme for [Jekyll](http://jekyllrb.com/).
+
+(if you're looking for the [Ghost](http://ghost.org) release of the theme, check [this page](https://github.com/camporez/Thinny/releases/tag/v0.3-alexandra))
+
+##Demo
+[![Preview image](https://f.cloud.github.com/assets/5755892/2002329/bdb5a052-85ed-11e3-8e00-a892910b6917.png)](http://camporez.com/)
+The above image is a preview of how the post header looks on Thinny.
+
+A live demo is available [on my personal blog](http://camporez.com/).
+
+##More information
+Read the blog post [here](http://camporez.com/blog/thinny-2/).
+
+##Reporting issues
+You can report an issue or request a feature [here](http://github.com/camporez/camporez.github.io/issues) or on [twitter](http://twitter.com/iancamporez).
