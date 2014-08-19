@@ -39,6 +39,4 @@ If you don't get any errors, you are ready to run make. This will take awhile.
 
 Next run make install and you are ready to go! Try out one of the examples included with liquidsoap:
 
-{% highlight %}
-$ liquidsoap -c liquidsoap/examples/radio.liq
-{% endhighlight %}
+`$ liquidsoap -c liquidsoap/examples/radio.liq`
