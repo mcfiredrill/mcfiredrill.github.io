@@ -41,4 +41,4 @@ Next run make install and you are ready to go! Try out one of the examples inclu
 
 {% highlight %}
 $ liquidsoap -c liquidsoap/examples/radio.liq
-{% highlight %}
+{% endhighlight %}
