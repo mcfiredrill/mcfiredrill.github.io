@@ -12,7 +12,7 @@ Just as an example, here is what I use, its a ruby script that uses the json api
 
 dj_auth.rb
 
-```ruby
+{% highlight ruby %}
 #!/usr/bin/env ruby
 
 Bundler.require
@@ -30,11 +30,11 @@ if resp["success"] == true
 else
   puts false
 end
-```
+{% endhighlight %}
 
 Define a function in liquid soap that calls this external script, and you can pass that function as the auth parameter to input.harbor
 
-```
+{% highlight ruby %}
 #auth function
 def dj_auth(user,password) =
   u = get_user(user,password)
@@ -49,11 +49,11 @@ def dj_auth(user,password) =
     false
   end
 end
-```
+{% endhighlight %}
 
-```
+{% highlight ruby %}
 live_dj = input.harbor("datafruits",port=9000,auth=dj_auth,on_disconnect=on_disconnect)
-```
+{% endhighlight %}
 
 Keep in mind, in some clients there is stupidly no option to set the source
 password. If your djs are using said clients, you have a couple of options. You
