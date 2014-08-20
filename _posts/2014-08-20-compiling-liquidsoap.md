@@ -40,3 +40,5 @@ If you don't get any errors, you are ready to run make. This will take awhile.
 Next run make install and you are ready to go! Try out one of the examples included with liquidsoap:
 
 `$ liquidsoap -c liquidsoap/examples/radio.liq`
+
+I’m currently [writing a book about liquidsoap!](https://leanpub.com/modernonlineradiowithliquidsoap)
