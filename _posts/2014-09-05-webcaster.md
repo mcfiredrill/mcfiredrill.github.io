@@ -6,9 +6,20 @@ category:
 tags: [liquidsoap]
 ---
 ![My helpful screenshot](/assets/images/webcaster_screenshot.png)
-Toots has been working on a very exciting tool that allows you to stream directly to liquid soap from a web browser. Imagine if your DJs could start broadcasting on your radio without needing to download any software!
 
-The main technologies that make this possible are websockets and emscripten. There is a websocket endpoint on liquidsoap that receives the mp3 data. Emscripten is used to compile the libshine fixed point encoding library to Javascript.
+## Streaming to icecast/liquidsoap directly from the browser
+
+[Toots](https://github.com/toots), one of the main liquidsoap developers, has been working on a very exciting tool that allows you to stream directly to liquid soap from a web browser. Imagine if your DJs could start broadcasting on your radio without needing to download any software!
+
+## Technologies at hand
+
+The main technologies that make this possible are websockets and emscripten.
+There is a websocket endpoint on liquidsoap that receives the mp3 data.
+Emscripten is used to compile the libshine fixed point encoding library to
+Javascript. Read more about how emscripten works
+[here](https://github.com/kripken/emscripten) if you are interested.
+
+## Getting started
 
 Toots has released the Javascript library
 [here](https://github.com/webcast/webcast.js) and has an example client
@@ -43,6 +54,8 @@ Check the output of liquidsoap and you should see that a client connected to the
 ![gif action](/assets/images/webcaster.gif)
 
 You can use this setup with your usual icecast/shoutcast based liquidsoap configurations as well.
+
+## But wouldn't it be nice if...
 
 Now, the microphone input works well. For me, I'd like to stream directly from Traktor to this. If you're looking to stream from audio software already running on your system, you might be out of luck as it looks like only microphone/line-in can be captured. You could use something like soundflower to route your computer's output to input, but that's another article.
 
