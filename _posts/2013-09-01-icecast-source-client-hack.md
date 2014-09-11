@@ -35,7 +35,7 @@ def dj_auth(user,password) =
   ret = list.hd(ret)
   #return true to let the client transmit data, or false to tell harbor to decline
   if ret == "true" then
-    title_prefix := "LIVE NOW ♫✩ -- #{u} ✩♪" 
+    title_prefix := "LIVE NOW ♫✩ -- #{u} ✩♪"
     true
   else
     false
@@ -47,3 +47,5 @@ live_dj = input.harbor("datafruits",port=9000,auth=dj_auth,on_disconnect=on_disc
 {% endhighlight %}
 
 You simply check if the username sent was 'source' and then split the password string at ';'.
+
+{% include mailchimp.html %}

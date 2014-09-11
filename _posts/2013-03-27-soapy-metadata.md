@@ -138,3 +138,5 @@ A simple set setInterval will work for polling and updating the html.
 
 While not as cool, this is a lot easier to work with at the moment. Perhaps I
 can think of other radio data I could store in redis and attach an API to from my app.
+
+{% include mailchimp.html %}
