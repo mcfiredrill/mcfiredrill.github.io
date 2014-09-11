@@ -57,8 +57,14 @@ You can use this setup with your usual icecast/shoutcast based liquidsoap config
 
 ## But wouldn't it be nice if...
 
-Now, the microphone input works well. For me, I'd like to stream directly from Traktor to this. If you're looking to stream from audio software already running on your system, you might be out of luck as it looks like only microphone/line-in can be captured. You could use something like soundflower to route your computer's output to input, but that's another article.
+Now, the microphone input works well. For me, I'd like to stream directly from
+Traktor to this. If you're looking to stream from audio software already running
+on your system, you might be out of luck as it looks like only
+microphone/line-in can be captured. You could use something like soundflower to
+route your computer's output to input, but that's [another article]({% post_url 2014-09-10-soundflower %}).
 
 Luckily Traktor and similar software already supports broadcasting to icecast _anyway_, so I guess its not really an issue.
 
 I’m currently [writing a book about liquidsoap!](https://leanpub.com/modernonlineradiowithliquidsoap)
+
+{% include mailchimp.html %}

@@ -383,7 +383,7 @@ pre code {
 	-moz-osx-font-smoothing: antialiased;
 	 -webkit-font-smoothing: antialiased;
 	         font-smoothing: antialiased;
-	
+
 	letter-spacing: 1.2pt;
 	font-size: 12px;
 	font-weight: 600;
@@ -520,4 +520,19 @@ pre code {
 .footnotes {
 	margin-top: 60px;
 	border-top: 1px solid #EEE;
+}
+
+section.book {
+  background:#ccc;
+  padding: 20px;
+}
+
+.book header {
+  width: 40%;
+  float: left;
+}
+
+.book article {
+  line-height: 1.6em;
+  font-size: 16px;
 }
