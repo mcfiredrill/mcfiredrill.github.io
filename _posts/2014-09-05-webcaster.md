@@ -13,6 +13,9 @@ tags: [liquidsoap]
 
 ## Technologies at hand
 
+Here is the flowchart from the webcast project itself.
+![webcast flow](/assets/images/webcast_flow.svg)
+
 The main technologies that make this possible are websockets and emscripten.
 There is a websocket endpoint on liquidsoap that receives the mp3 data.
 Emscripten is used to compile the libshine fixed point encoding library to
