@@ -33,7 +33,9 @@ I’ll show you how to set up liquidsoap to use the example application.
 The webcast.js repository contains [the simplest possible example.](https://github.com/webcast/webcast.js)
 
 Just run this liquid soap line:
-`liquidsoap "output.ao(fallible=true,audio_to_stereo(input.harbor('mount',port=8080)))"`
+{% highlight bash %}
+liquidsoap "output.ao(fallible=true,audio_to_stereo(input.harbor('mount',port=8080)))"`
+{% endhighlight %}
 
 Toots also has an example client for testing:
 [https://github.com/webcast/webcaster](https://github.com/webcast/webcaster)
