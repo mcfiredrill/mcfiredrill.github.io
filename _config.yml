@@ -10,8 +10,8 @@ title:		big balls of mud killer
 tagline:	'blog'
 description:	'My personal blog.'
 url:		http://freedrool.us/
-commentsystem:	google
-disqus:		example
+commentsystem:	disqus
+disqus:		bigballsofmud
 
 author :
   name : Tony Miller
