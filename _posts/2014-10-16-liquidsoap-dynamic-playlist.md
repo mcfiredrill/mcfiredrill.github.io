@@ -55,3 +55,5 @@ tweet, a user request on a webpage, a telnet command, or anything else you can
 think of. I will go into more possibilities in an upcoming post.
 
 Here is the [documentation on request sources from savonet's site](http://savonet.sourceforge.net/doc-svn/request_sources.html).
+
+{% include mailchimp.html %}
