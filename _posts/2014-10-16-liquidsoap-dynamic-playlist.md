@@ -3,8 +3,7 @@ layout: post
 title: "liquidsoap dynamic playlist"
 tags: [liquidsoap]
 ---
-In my [liquidsoap getting started guide]({% post_url
-2014-09-21-liquidsoap-getting-started %}) I show you how to use a simple text
+In my [liquidsoap getting started guide]({% post_url 2014-09-21-liquidsoap-getting-started %}) I show you how to use a simple text
 based playlist. In this guide I wanted show you how to use `request.dynamic` to
 build a playlist that is based on any function at all, not just reading a simple
 text file. You could determine the next song by user votes, hitting some
