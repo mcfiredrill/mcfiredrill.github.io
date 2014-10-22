@@ -5,7 +5,7 @@ tags: [liquidsoap]
 ---
 
 I thought I would write an article aimed more at beginners to
-[liquidsoap](savonet.sourceforge.net). This
+[liquidsoap](http://savonet.sourceforge.net). This
 tutorial will give you a solid starting point into creating your own streaming
 radio with liquidsoap.
 
