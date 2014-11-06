@@ -13,8 +13,8 @@ radio with liquidsoap.
 
 # What this tutorial covers
 
-* setting up a stream with a backup playlist, live dj input via harbor, and emergency
-  backup single file
+* setting up a stream with a backup playlist, live dj input via harbor, and
+* emergency fallback broadcast to a single file
 * mp3 and ogg output to icecast
 * dumping output to a file
 
