@@ -28,7 +28,7 @@ on_fail = single("./technical_difficulties.wav")
 
 source = fallback(track_sensitive=false,
                   [live_dj,backup_playlist,on_fail])
-{% endhilight %}
+{% endhighlight %}
 
 While some sources may be fallible, that's ok if that are arranged in a
 cascading fallback, with the last source being unfallible. This way we can
