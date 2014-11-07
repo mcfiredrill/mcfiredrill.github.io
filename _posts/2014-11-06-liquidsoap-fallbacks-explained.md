@@ -6,7 +6,7 @@ tags: [liquidsoap]
 
 ## Preventing Radio Castatrophy
 
-[!not what liquidsoap looks like](/assets/images/old_radio.gif)
+![not what liquidsoap looks like](/assets/images/old_radio.gif)
 
 In liquidsoap, the *last* thing you want is your users to hear silence. There
 are many reasons this could happen, the DJ fell asleep/got drunk, there's a bad
