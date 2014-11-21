@@ -116,6 +116,30 @@ This means the function returns a source type.
 
 ## defining functions
 
+We can define a function with `def` and `end` to mark the end of a function.
+
+{% highlight ruby %}
+  def function_name(arguments) =
+    function_body
+  end
+{% endhighlight %}
+
+like so:
+
+{% highlight ruby %}
+def get_user(user,password) =
+  if user == "source" then
+    x = string.split(separator=';',password)
+    list.nth(x,0)
+  else
+    user
+  end
+end
+{% endhighlight %}
+
+The return type of the function is simply the last line of the body of the
+function. So in the case of the function above, it would be string.
+
 ## refs
 
 Liquidsoap is a functional language, however it is not a *pure* functional language. You can use mutatable variables if
