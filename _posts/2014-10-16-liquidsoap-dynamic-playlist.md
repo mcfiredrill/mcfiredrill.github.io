@@ -21,6 +21,26 @@ def my_request_function () =
 end
 {% endhighlight %}
 
+The script can really do anything, as long as it prints out the path to the next
+song. Here is what my script looks like.
+
+{% highlight ruby %}
+#!/usr/bin/env ruby
+Bundler.require
+
+R = Redis.new
+
+next_song = R.lpop "datafruits.fm:playlist"
+puts next_song
+{% endhighlight %}
+
+When I run the script:
+
+{% highlight bash %}
+$ bundle exec ruby ./next_song.rb
+/tmp/broadcast.mp3
+{% endhighlight %}
+
 I have to mark this source as fallible, since its calling an external script.
 
 {% highlight ruby %}
