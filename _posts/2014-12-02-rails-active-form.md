@@ -4,10 +4,6 @@ title: "rails activeform - put accepts_nested_attributes_for in its place"
 tags: [rails]
 ---
 
-[!dinosaur](/assets/images/dinosaur.jpg)
-
-All dinosaurs get what they deserve, if you know what I mean.
-
 I don't know about you, but the amount of successes I had with
 `accepts_nested_attributes_for` were few and far between. It always felt like a
 clunky API. If you've ever worked on a large rails project you also know the
@@ -35,7 +31,7 @@ class SignupForm < ActiveForm::Base
     attributes :plan_id, :stripe_card_token, required: true
   end
 end
-{% endhilight %}
+{% endhighlight %}
 
 Then in the controller you initialize a new instance of the form class passing
 an instance of the main model for it to work on, and then call
@@ -46,7 +42,7 @@ user = User.new
 @signup_form = SignupForm.new(User.new)
 @signup_form.submit user_params
 @signup_form.save
-{% endhilight %}
+{% endhighlight %}
 
 The associations will be saved automatically. If there are any validation errors
 on the main model of the associations they will be added to the form class.
