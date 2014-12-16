@@ -11,7 +11,7 @@ I was scanning the liquidsoap mailing list, and I noticed there were some people
 These instructions are tested on ubuntu 14.04 trusty. The easiest way to compile liquid soap is with the liquidsoap-full repo, as liquidsoap depends on many ocaml modules developed by the liquidsoap team. They are all included in this repository as git submodules.
 
 Clone the repository:
-`git clone https://github.com/liquidsoap-full`
+`git clone https://github.com/savonet/liquidsoap-full`
 
 Not all of the modules are required to run liquidsoap. There are many different modules for different audio/video formats, plugins etc. They are all defined via th PACKAGES file in the top level directory of the repo. You can copy PACKAGES.default to PACKAGES and then edit the file to suit your needs.
 
