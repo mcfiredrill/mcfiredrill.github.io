@@ -153,3 +153,5 @@ current_dj_name = ref ""
 
 Check out the [official liquidsoap
 language reference](http://savonet.sourceforge.net/doc-svn/language.html) for more.
+
+{% include mailchimp.html %}
