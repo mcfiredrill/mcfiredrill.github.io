@@ -117,8 +117,7 @@ station.
 source = sky(source)
 source = compress(source, attack = 5.0, gain = 8.0, knee = 10.0, ratio = 5.0, release = 100.0, threshold = -18.0, rms_window = 0.7)
 source = normalize(source, target = -1.0, threshold = -65.0)
-source = limit(source, threshold = -0.2, attack = 2.0, release = 25.0,
-rms_window = 0.02)
+source = limit(source, threshold = -0.2, attack = 2.0, release = 25.0, rms_window = 0.02)
 {% endhighlight %}
 
 I'd like to thank [JamesHarrison](https://github.com/JamesHarrison) for sharing
