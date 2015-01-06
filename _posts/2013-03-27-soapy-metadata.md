@@ -18,7 +18,7 @@ use in my mobile apps for this radio.
 
 ### pub_metadata.rb
 
-```ruby
+{% highlight ruby %}
 # adopted from https://github.com/gorsuch/sinatra-streaming-example/blob/master/worker.rb
 
 require 'redis'
@@ -31,7 +31,7 @@ meta = ARGV[0]
 
 puts "setting metadata..."
 r.publish "metadata", meta
-```
+{% endhighlight %}
 
 ### radio.liq
 
@@ -49,7 +49,7 @@ end
 I wanted to use streaming in Sinatra to update the metadata quickly, instead of polling.
 
 ### sinatra_app.rb
-```ruby
+{% highlight ruby %}
 require 'redis'
 require 'sinatra'
 
@@ -70,18 +70,18 @@ get '/metadata' do
     end
   end
 end
-```
+{% endhighlight %}
 
 Then we can do something like this in the javascript:
 
-```javascript
+{% highlight ruby %}
 var source = new EventSource('/metadata');
 source.addEventListener('refresh', function(e){
   console.log("got sse");
   console.log(e.data);
   $('#nowplaying').html(e.data);
 });
-```
+{% endhighlight %}
 
 This was a little bit more difficult to manage than I expected. It was working
 sporadically, and it turns out you need to manage all the connections by hand,
@@ -96,7 +96,7 @@ So I ended up just using a regular redis key.
 
 ### pub_metadata.rb
 
-```ruby
+{% highlight ruby %}
 # adopted from https://github.com/gorsuch/sinatra-streaming-example/blob/master/worker.rb
 
 require 'redis'
@@ -109,13 +109,13 @@ meta = ARGV[0]
 
 puts "setting metadata..."
 puts r.set "currentsong", meta
-```
+{% endhighlight %}
 
 We can just set up a normal get route to get the key.
 
 ### sinatra_app.rb
 
-```ruby
+{% highlight ruby %}
   redis_url = ENV["REDISTOGO_URL"] || "redis://localhost:6379"
   uri = URI.parse(redis_url)
   set :redis, Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)
@@ -123,18 +123,18 @@ We can just set up a normal get route to get the key.
   get '/metadata' do
     settings.redis.get("current-song").to_s
   end
-```
+{% endhighlight %}
 
 A simple set setInterval will work for polling and updating the html.
 
-```javascript
+{% highlight javascript %}
   setInterval(function(){
     $.get("/metadata",function(data){
       console.log("got data: "+data);
       $('#nowplaying').html(data);
     });
   },5000);
-```
+{% endhighlight %}
 
 While not as cool, this is a lot easier to work with at the moment. Perhaps I
 can think of other radio data I could store in redis and attach an API to from my app.
