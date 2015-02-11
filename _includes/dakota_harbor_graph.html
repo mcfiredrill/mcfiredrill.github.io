@@ -1,0 +1,11 @@
+<div id="dakota-buffer-graph">
+</div>
+<script type='text/javascript' src='/assets/js/dygraph-combined-dev.js'></script>
+<script type="text/javascript">
+  dakota_graph = new Dygraph(
+
+    // containing div
+    document.getElementById("dakota-buffer-graph"),
+    "/assets/csvs/dakota_harbor.csv"
+  );
+</script>
