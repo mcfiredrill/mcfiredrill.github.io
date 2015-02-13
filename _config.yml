@@ -46,7 +46,7 @@ menu:
     url:	/about.html
 
   - portfolio: Portfolio
-    url        /portfolio.html
+    url:       /portfolio.html
 
 copyright:
   author:	freedrool
