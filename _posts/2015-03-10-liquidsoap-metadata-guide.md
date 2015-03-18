@@ -175,3 +175,4 @@ Now just call this function periodically, say every 10 seconds, with `setInterva
   setInterval(radioTitle, 10000);
 {% endhighlight %}
 
+{% include mailchimp.html %}
