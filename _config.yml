@@ -48,6 +48,9 @@ menu:
   - portfolio: Portfolio
     url:       /portfolio.html
 
+  - work:      Work
+    url:       /work.html
+
 copyright:
   author:	freedrool
   url:		http://freedrool.us
