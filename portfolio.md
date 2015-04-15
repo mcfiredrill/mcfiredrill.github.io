@@ -17,9 +17,12 @@ docker, nodejs, icecast/liquidsoap. Currently in development.
 An internet radio station I've been running since late 2012. Technology is based
 around rails, icecast, liquidsoap, redis, more.
 
-Currently working on launching a new version integrating live VJing via webRTC!
+Currently working on launching a new version integrating a custom chat server
+and live VJing via webRTC!
 
-[http://datafruits.fm](http://datafruits.fm/)
+[![datafruits screenshot](/assets/images/datafruits12_scrot.png)](http://datafruits12.s3-website-us-east-1.amazonaws.com/)
+
+[http://datafruits.fm](http://datafruits12.s3-website-us-east-1.amazonaws.com/)
 
 ### Liquidsoap book
 
