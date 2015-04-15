@@ -20,9 +20,9 @@ around rails, icecast, liquidsoap, redis, more.
 Currently working on launching a new version integrating a custom chat server
 and live VJing via webRTC!
 
-[![datafruits screenshot](/assets/images/datafruits12_scrot.png)](http://datafruits12.s3-website-us-east-1.amazonaws.com/)
+[![datafruits screenshot](/assets/images/datafruits12_scrot.png)](http://datafruits.fm/)
 
-[http://datafruits.fm](http://datafruits12.s3-website-us-east-1.amazonaws.com/)
+[http://datafruits.fm](http://datafruits.fm/)
 
 ### Liquidsoap book
 
