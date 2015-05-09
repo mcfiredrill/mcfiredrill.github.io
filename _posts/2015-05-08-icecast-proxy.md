@@ -116,6 +116,8 @@ class TcpProxyServer
           socket.end()
       else
         proxySocket.write(data)
+
+new TcpProxyServer(8000).start()
 {% endhighlight %}
 
 If you were using this with regular icecast, you could use the tcp proxy for both listeners and source clients, since you can’t have two servers listening on the same port on the same machine.
