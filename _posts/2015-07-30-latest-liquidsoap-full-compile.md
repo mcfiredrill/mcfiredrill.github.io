@@ -37,3 +37,5 @@ I’m not too familiar with the ocaml community and what the future plans for op
 are. Perhaps they will adopt some kind of bundler/carton/cargo type program to
 specify dependencies instead of using autoconf? I guess ocamlfind seems to play
 that role for now.
+
+{% include mailchimp.html %}
