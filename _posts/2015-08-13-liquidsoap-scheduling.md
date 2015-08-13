@@ -12,7 +12,7 @@ For example, here is how you would schedule a different playlist for different t
 
 {% highlight ruby %}
 
-weeknights = playlist(“./weeknights”, mode="random")
+weeknights = playlist("./weeknights", mode="random")
 
 source = fallback(track_sensitive=false, [live,
         switch([
