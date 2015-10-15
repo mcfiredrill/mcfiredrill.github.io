@@ -56,3 +56,14 @@ instance where you need to save two or more models with one form.
 I'm not sure if this is slated for rails 5 at this point? The github repo is
 currently under the rails organization on
 [github](https://github.com/rails/activeform).
+
+### UPDATE:
+Since this post, activeform(now renamed to actionform) is actively [being
+discouraged from real use](https://github.com/railsgsoc/actionform/issues/41). In reality it was only an experiment started in a
+GSOC project.
+
+Personally I still prefer to use form objects in certain situations. In my own
+projects I have removed actionform and replaced my form objects with plain
+objects that mix in ActiveModel::Model. It is a bit similar to the way it is
+done in this [thoughtbot
+post](https://robots.thoughtbot.com/activemodel-form-objects).
