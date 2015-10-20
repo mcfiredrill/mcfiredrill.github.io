@@ -86,3 +86,5 @@ I changed the exit button to go to the main route:
 {% highlight javascript %}
 {{#link-to 'application'}}<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>{{/link-to}}
 {% endhighlight %}
+
+{% include general_mailchimp.html %}

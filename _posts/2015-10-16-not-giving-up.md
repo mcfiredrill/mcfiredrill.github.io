@@ -41,3 +41,4 @@ any real results without a few years of real commitment.
 Most people quit before they get anywhere. Effort compounds quicker than you
 think. How far can you go if you keep going when everyone else quits?
 
+{% include general_mailchimp.html %}

@@ -21,3 +21,5 @@ So due to youtube streaming’s limited API I have switched back to Twitch for n
 In the future I’d like to incorporate this into [Streampusher](http://streampusher.com) somehow, but I haven’t quite worked out how yet.
 
 Do you have any interesting methods for including a live video stream on your radio station? Please let me know in the comments.
+
+{% include general_mailchimp.html %}
