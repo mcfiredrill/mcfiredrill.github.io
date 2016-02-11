@@ -145,11 +145,19 @@ function. So in the case of the function above, it would be string.
 Liquidsoap is a functional language, however it is not a *pure* functional language. You can use mutatable variables if
 you want to. Liquidsoap borrows a concept from ocaml known as `ref`:
 
+When assigning values to a ref, you use `:=` instead of `=`.
+
 {% highlight ruby%}
-title = ref ""
-current_dj_name = ref ""
+title := ref ""
+current_dj_name := ref ""
 {% endhighlight %}
 
+If you want to print a ref, you should use the `!` operator.
+
+{% highlight ruby%}
+title = ref ""
+log("title: #{!title}")
+{% endhighlight %}
 
 Check out the [official liquidsoap
 language reference](http://savonet.sourceforge.net/doc-svn/language.html) for more.
