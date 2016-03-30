@@ -45,8 +45,8 @@ menu:
   - title:	About
     url:	/about.html
 
-  - work:      Work
-    url:       /work.html
+  - work:      Works
+    url:       /works.html
 
 copyright:
   author:	freedrool
