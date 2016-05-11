@@ -16,8 +16,10 @@ You have to use some operators on your source to actually get the crossfades and
 
 Assuming you have assigned a playlist or request.dynamic source to `backup_playlist`:
 
+{% highlight ruby %}
 source = cue_cut(backup_playlist)
 source = crossfade(backup_playlist)
+{% endhighlight %}
 
 This opens up quite a few possibilities in my mind. For example you could assign per-track fades or cue points in a database, fetch them via an API or similar in liquidsoap and use the annotate protocol with request.dynamic to have per track fades/cuepoints.
 
