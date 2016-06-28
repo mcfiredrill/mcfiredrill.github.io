@@ -65,6 +65,6 @@ month and I am honestly pretty concerned about it.
 If I keep trying I'm sure I will learn something. And the next business I start will be even better, even if this one fails.
 
 I'll keep blogging here about my progress as well as on the
-[streampusher.com](streampusher blog).
+[streampusher blog](http://streampusher.com/).
 
 {% include general_mailchimp.html %}
