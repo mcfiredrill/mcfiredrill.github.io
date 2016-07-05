@@ -49,3 +49,5 @@ So I changed it to use the prepend option only if we are not in production (fing
 The ember-cli-rails team claims that they don't plan to support this method of
 serving your ember app forever though. I wonder if I can accomplish the same
 using the supported `mount_ember_app` helper.
+
+{% include general_mailchimp.html %}
