@@ -33,7 +33,7 @@ Since I was using the ember_asset_tags helpers with a prepend option already, th
 
 So I changed it to use the prepend option only if we are not in production (fingerprinting in ember cli only happens in rails production environment).
 
-{% highlight ruby %}
+{% highlight erb %}
 <!-- Your Ember app will be rendered here. -->
 <div id="ember-application"></div>
 <% if Rails.env.production? %>
