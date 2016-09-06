@@ -50,4 +50,8 @@ The ember-cli-rails team claims that they don't plan to support this method of
 serving your ember app forever though. I wonder if I can accomplish the same
 using the supported `mount_ember_app` helper.
 
-{% include general_mailchimp.html %}
+I'm writing a book about how to add ember to your rails app. I cover the
+different approaches and save you tons of time scouring blog posts and forums
+for info. Check it out [here](/emberyourrails).
+
+{% include ember_mailchimp.html %}
