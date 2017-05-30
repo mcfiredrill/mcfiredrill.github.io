@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body>
+    <div id="article">
+      <h1>EMBER YOUR RAILS</h1>
+      {{ content }}
+    </div>
+    <script>
+      var width = $(window).width()
+      if ( width > 899 )
+      $( function(){
+        $.stellar({
+          responsive: true,
+          verticalScrolling: true,
+          horizontalOffset: 0,
+          verticalOffset: 0,
+          positionProperty: 'transform',
+          });
+          });
+    </script>
+  </body>
+</html>
