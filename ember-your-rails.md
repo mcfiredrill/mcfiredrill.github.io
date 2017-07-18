@@ -3,6 +3,8 @@ layout: emberyourrails
 title: Ember your rails
 ---
 
+![ember and their friend rails](/assets/images/ember-rails.jpg)
+
 You want to make your app feel more modern and interactive. But you live in the real world, full of aging Rails apps that can’t just "sprinkle" in some ember...
 
 ...or can you? Its not as impossible as you might think and the tooling is getting better every day.
