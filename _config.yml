@@ -48,6 +48,9 @@ menu:
   - work:      Works
     url:       /works.html
 
+  - emberyourrails: Ember Your Rails
+    url:      /emberyourrails.html
+
 copyright:
   author:	freedrool
   url:		http://freedrool.us
