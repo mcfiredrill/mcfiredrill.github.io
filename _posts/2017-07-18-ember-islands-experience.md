@@ -141,8 +141,8 @@ Turns out there are also benefits to a hybrid server rendered/SPA. If you need s
 
 ## Deployment
 
-[Paul McMahon](tokyodev.com) left a really nice detailed issue about how he is currently deploying his ember/rails project using ember-cli-rails. I'm using a similar approach right now.
-https://github.com/thoughtbot/ember-cli-rails/issues/427
+[Paul McMahon](tokyodev.com) left a really [nice detailed issue](https://github.com/thoughtbot/ember-cli-rails/issues/427) about how he is currently deploying his ember/rails project using ember-cli-rails. I'm using a similar approach right now.
+
 
 This is a decent hack for now, but the community seems to be moving towards ember-cli-deploy based deployments. Perhaps some kind of integration for capistrano will emerge.
 
