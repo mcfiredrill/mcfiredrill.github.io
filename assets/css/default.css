@@ -523,8 +523,10 @@ pre code {
 }
 
 section.book {
-  background:#ccc;
+  background:#eee;
   padding: 20px;
+  border: 1px solid #bbb;
+  border-radius: 2px;
 }
 
 .book header {
@@ -535,4 +537,33 @@ section.book {
 .book article {
   line-height: 1.6em;
   font-size: 16px;
+}
+
+#mc_embed_signup{
+  clear:left; font:14px Helvetica,Arial,sans-serif;
+}
+
+#mc_embed_signup input.email {
+  padding: 15px;
+  font-size: 20px;
+  border-radius: 4px;
+}
+
+#mc_embed_signup input.button {
+  display: block;
+  width: 35%;
+  /* margin: 0 0 10px 0; */
+  /* min-width: 90px; */
+  padding: 20px;
+  height: 100%;
+  font-size: 30px;
+  background-color: #e57e00;
+  -moz-transition: background-color .2s ease-in;
+  -o-transition: background-color .2s ease-in;
+  -webkit-transition: background-color .2s ease-in;
+  transition: background-color .2s ease-in;
+}
+
+#mc_embed_signup input.button:hover {
+  background-color: #00b764;
 }
