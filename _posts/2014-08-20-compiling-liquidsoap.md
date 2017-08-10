@@ -41,6 +41,6 @@ Next run make install and you are ready to go! Try out one of the examples inclu
 
 `$ liquidsoap -c liquidsoap/examples/radio.liq`
 
-I’m currently [writing a book about liquidsoap!](https://leanpub.com/modernonlineradiowithliquidsoap)
+I’m currently [writing a book about liquidsoap!](https://gumroad.com/products/JVXcv)
 
 {% include mailchimp.html %}

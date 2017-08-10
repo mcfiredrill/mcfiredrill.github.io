@@ -70,6 +70,6 @@ route your computer's output to input, but that's [another article]({% post_url 
 
 Luckily Traktor and similar software already supports broadcasting to icecast _anyway_, so I guess its not really an issue.
 
-I’m currently [writing a book about liquidsoap!](https://leanpub.com/modernonlineradiowithliquidsoap)
+I’m currently [writing a book about liquidsoap!](https://gumroad.com/products/JVXcv)
 
 {% include mailchimp.html %}

@@ -59,6 +59,6 @@ Keep in mind, in some clients there is stupidly no option to set the source
 password. If your djs are using said clients, you have a couple of options. You
 could use a silly hack I mentioned in a [previous post]{% post_url 2013-09-01-icecast-source-client-hack %}, where you simply enter the password in the same field separated by some character and parse that. I use this method, I instruct DJs to enter their username and password separated by a semicolon if their source client has no option to set the username.
 
-I’m currently [writing a book about liquidsoap!](https://leanpub.com/modernonlineradiowithliquidsoap)
+I’m currently [writing a book about liquidsoap!](https://gumroad.com/products/JVXcv)
 
 {% include mailchimp.html %}

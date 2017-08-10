@@ -7,8 +7,8 @@ tags: [liquidsoap, icecast, ebook]
 
 ![modern online radio with liquidsoap](/assets/images/liquidsoap_book.png)
 
-I finally released my liquidsoap book! Its available at
-[leanpub](https://leanpub.com/modernonlineradiowithliquidsoap) and [gumroad](https://gumroad.com/products/JVXcv).
+I finally released my liquidsoap book! Its available at for purchase at
+[gumroad](https://gumroad.com/products/JVXcv).
 
 If you buy the book, I'd love your feedback. Its only the first release, and I
 plan to release many more updates to the book.

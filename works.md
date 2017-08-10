@@ -55,7 +55,7 @@ be difficult to learn. I hope this book I am writing will help with that. I
 expect to finish the book sometime this Spring.
 
 [Modern Online Radio with
-Liquidsoap](https://leanpub.com/modernonlineradiowithliquidsoap/)
+Liquidsoap](https://gumroad.com/products/JVXcv)
 
 ### rp3
 
