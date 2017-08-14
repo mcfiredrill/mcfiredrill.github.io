@@ -48,7 +48,7 @@ So I changed it to use the prepend option only if we are not in production (fing
 
 The ember-cli-rails team claims that they don't plan to support this method of
 serving your ember app forever though. I wonder if I can accomplish the same
-using the supported `mount_ember_app` helper.
+using the supported `render_ember_app` helper.
 
 I'm writing a book about how to add ember to your rails app. I cover the
 different approaches and save you tons of time scouring blog posts and forums
