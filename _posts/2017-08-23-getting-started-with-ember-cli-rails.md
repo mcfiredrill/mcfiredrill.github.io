@@ -132,7 +132,8 @@ Make the index action for the PostsController in rails look like this:
 {% endhighlight %}
 
 Visit localhost:3000, you won't see anything on the page but if you use the
-Ember Inspector you can see that the data has loaded.
+[Ember
+Inspector](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi?hl=en) you can see that the data has loaded.
 
 ![ember inspector data
 screenshot](/assets/images/ember_inspector_data_screenshot.png)
