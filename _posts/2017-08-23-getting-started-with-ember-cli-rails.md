@@ -154,7 +154,7 @@ Lets create a form to save the posts now.
 We can create a component to keep the form actions in.
 
 {% highlight bash  %}
-☯tony@okirakugokiraku☯ ~/src/ember_rails_test/frontend(master)$ ember g component post-form
+$ ember g component post-form
 installing component
   create app/components/post-form.js
   create app/templates/components/post-form.hbs
