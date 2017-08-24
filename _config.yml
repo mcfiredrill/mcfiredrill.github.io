@@ -58,4 +58,7 @@ copyright:
 # Google Analytics
 google_analytics: 'UA-40007409-1'
 
-gems:      ['jekyll-paginate']
+gems:      ['jekyll-paginate', 'jekyll-bootstrap-sass']
+
+sass:
+  sass_dir: _sass
