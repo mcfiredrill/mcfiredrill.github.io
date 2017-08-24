@@ -34,6 +34,8 @@ Another feature request comes in to add some intense user interactivity to your 
 
 Why? Why can’t I just use ember like all the cool new projects are?
 
+![i hate my code i hate my life](/assets/images/guy_at_keyboard.jpg)
+
 <h2><i>"I'll never be able to add something like Ember.js to our huge monster
 monolithic rails application. It will take weeks or months to re-architect our
 application or worse, a full rewrite."</i></h2>
@@ -45,7 +47,7 @@ This book will show you that its not that hard to add some Ember magic to your a
 
 Your colleagues and boss will think you are a wizard. But you’re not a wizard. Or are you?
 
-![cool drawing of a wizard](/assets/images/wizard.jpg)
+![ember spells](/assets/images/wizard.png)
 
 Turn your 💩CRUD💩-y rails application into the interactive modern app that you are dreaming of WITHOUT doing a total rewrite.
 
@@ -59,7 +61,7 @@ Maybe you'll even start to like Javascript a little bit.
 - which ember data to use for the version of rails you are using
 - how to make a custom serializer/adapter if your json is just a bit out of line with what ember expects
 - which version of active model serializers you should be using
-- how to migrate your existing legacy five layer jQuery dip 🌮🧀
+- how to migrate your existing legacy five layer jQuery dip 🌮🧀🌯
 - deployment strategies to fit with your existing rails setup
 
 This book is currently a work in progress.
