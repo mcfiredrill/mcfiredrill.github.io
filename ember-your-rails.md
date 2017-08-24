@@ -5,10 +5,18 @@ title: Ember your rails
 
 ![ember and their friend ruby](/assets/images/ember_ruby.png)
 
-<h1>You want to add ember to your rails app, but you aren’t sure what approach
-to take and you don’t want to rewrite your entire app. This book will save you
-the time by showing you  how to add ember without rewriting the entire
-application.</h1>
+<h1>You want to add ember to your rails app, but...</h1>
+
+<ul>
+  <li>you aren't sure the best approach to take</li>
+  <li>you don't want to rewrite your <u>entire</u> application</li>
+  <li>not sure how to format your JSON in a way that ember expects</li>
+</ul>
+
+<p>
+This book will save you time by showing you the best approaches to introduce
+ember into your rails app, without rewriting your entire application.
+</p>
 
 <h2>You want to make your app feel more modern and interactive. But you live in the real world, full of aging Rails apps that can’t just "sprinkle" in some ember...</h2>
 
@@ -39,21 +47,20 @@ Your colleagues and boss will think you are a wizard. But you’re not a wizard.
 
 ![cool drawing of a wizard](/assets/images/wizard.jpg)
 
-Turn your CRUDy rails application into the interactive modern app that you are dreaming of WITHOUT doing a total rewrite.
+Turn your 💩CRUD💩-y rails application into the interactive modern app that you are dreaming of WITHOUT doing a total rewrite.
 
 Maybe you'll even start to like Javascript a little bit.
 
 ![click click click YEAH](/assets/images/cool.gif)
 
-# FIXME make this list longer
 # You will learn:
 - how to add ember to just one part of your rails app at a time, without
   rewriting your entire app
 - which ember data to use for the version of rails you are using
 - how to make a custom serializer/adapter if your json is just a bit out of line with what ember expects
-- which version of active model serializers
-- how to migrate your existing legacy five layer jQuery dip
-- deployment strategies
+- which version of active model serializers you should be using
+- how to migrate your existing legacy five layer jQuery dip 🌮🧀
+- deployment strategies to fit with your existing rails setup
 
 This book is currently a work in progress.
 Sign up to my mailing list now to receive updates and preview material about the forthcoming book.
