@@ -104,7 +104,7 @@ export default Ember.Route.extend({
 By default ember uses and expects the server to return json formatted according
 to the [JSONAPI](http://jsonapi.org/) spec.
 
-## kabab case
+## kabab🍡 case
 JSONAPI uses kabab-case instead of snake_case. Rails doesn't expect json to be
 formatted this way, so we can use the (active-model-adapter)[https://github.com/ember-data/active-model-adapter] ember addon to transform our json payloads.
 
