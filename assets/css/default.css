@@ -602,4 +602,11 @@ section.book {
 }
 
 .wow {
+  font-family: Debussy;
+  background: rgba(250, 128, 114, 0.66);
+  color: #8fff8f;
+  text-shadow: 2px 2px 2px #444;
+  font-size: 3rem;
+  transform: rotate(-7deg);
+  padding: 1rem;
 }
