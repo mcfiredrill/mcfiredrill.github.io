@@ -11,7 +11,7 @@ Here is how to get started with adding ember-cli-rails to your rails app.
 We are going to assuming you have a rails app like this one.
 It's just a base rails app with one model, Post, that has title and body fields.
 
-## install ember-cli-rails and ams
+## Install ember-cli-rails and ams
 
 Add these lines to your Gemfile and run bundle install.
 
@@ -43,12 +43,13 @@ EmberCli.configure do |c|
   end
 {%  endhighlight %}
 
+Add the line to your rails routes file...
 {% highlight ruby %}
 # config/routes.rb
 
 Rails.application.routes.draw do
   mount_ember_app :frontend, to: "/"
-  end
+end
 
 {%  endhighlight %}
 
@@ -56,6 +57,7 @@ Visit  "/" and now ember is rendering!
 
 ## Setting up the ember routes
 
+Now we can set up the routing on the ember side of the app.
 Create the `posts` route in the ember app.
 
 {% highlight bash %}
@@ -106,7 +108,7 @@ to the [JSONAPI](http://jsonapi.org/) spec.
 
 ## kebab🍡 case
 JSONAPI uses kebab-case (dash-case) instead of snake_case. Rails doesn't expect json to be
-formatted this way, so we can use the (active-model-adapter)[https://github.com/ember-data/active-model-adapter] ember addon to transform our json payloads.
+formatted this way, so we can use the [active-model-adapter](https://github.com/ember-data/active-model-adapter) ember addon to transform our json payloads.
 
 Install the addon.
 {% highlight bash %}
@@ -121,7 +123,7 @@ import ActiveModelAdapter from 'active-model-adapter';
 export default ActiveModelAdapter.extend();
 {% endhighlight %}
 
-# load posts
+# Load posts
 
 Make the index action for the PostsController in rails look like this:
 {% highlight ruby %}
@@ -150,11 +152,11 @@ You can fill out the posts.hbs template to view the data.
 {% endraw %}
 {% endhighlight %}
 
-# create form
+# Create form to save new posts
 
 Lets create a form to save the posts now.
 
-We can create a component to keep the form actions in.
+We can create a component to keep the form actions and template in.
 
 {% highlight bash  %}
 $ ember g component post-form
@@ -164,11 +166,11 @@ installing component
 installing component-test
 {% endhighlight %}
 
-Add `{{post-form}}` to the posts.hbs template to render it.
+Add {{post-form}} to the posts.hbs template to render it.
 
-app/templates/post.hbs
 {% highlight html %}
 {% raw %}
+<!-- app/templates/post.hbs -->
 {{#each model as |post|}}
 {{post-form}}
 
@@ -182,11 +184,12 @@ here are the posts
 {% endraw %}
 {% endhighlight %}
 
-We haven't added anything to the post-form template let, so let's add that.
+We haven't added anything to the post-form template yet, so let's add the input
+elements and submit button.
 
-app/templates/components/post-form.hbs
 {% highlight html %}
 {% raw %}
+<!-- app/templates/components/post-form.hbs -->
 {{input value=title}}
 <br/>
 {{textarea value=body}}
@@ -195,9 +198,9 @@ app/templates/components/post-form.hbs
 {% endraw %}
 {% endhighlight %}
 
-Write the save action in the post-form component and that method will be  called
-whenever the user clicks the Save button. We inject the store as a service to
-access ember data's store.
+When the user clicks the save button the save action will be called in the
+post-form component. We still have to write that action so let's do that now.
+ We inject the store as a service to access ember data's store.
 
 {% highlight javascript %}
 import Ember from 'ember';
@@ -221,7 +224,7 @@ Calling `post.save()` is when our rails app will be hit with a POST with the pay
 Right now the payload looks like this.
 
 {% highlight json %}
-{"data":{"attributes":{"title":"asdf","body":"adsf","penis":"asdf"},"type":"posts"}}
+{"data":{"attributes":{"title":"asdf","body":"adsf"},"type":"posts"}}
 {% endhighlight %}
 
 If you've worked with rails before you know that rails controllers expect
