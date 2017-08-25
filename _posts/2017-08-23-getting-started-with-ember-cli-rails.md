@@ -140,12 +140,14 @@ screenshot](/assets/images/ember_inspector_data_screenshot.png)
 
 You can fill out the posts.hbs template to view the data.
 {% highlight html %}
+{% raw %}
 {{#each model as |post|}}
   <h1>{{post.title}}</h1>
   <p>
     {{post.body}}
   </p>
 {{/each}}
+{% endraw %}
 {% endhighlight %}
 
 # create form
@@ -166,6 +168,8 @@ Add `{{post-form}}` to the posts.hbs template to render it.
 
 app/templates/post.hbs
 {% highlight html %}
+{% raw %}
+{{#each model as |post|}}
 {{post-form}}
 
 here are the posts
@@ -175,17 +179,20 @@ here are the posts
     {{post.body}}
   </p>
 {{/each}}
+{% endraw %}
 {% endhighlight %}
 
 We haven't added anything to the post-form template let, so let's add that.
 
 app/templates/components/post-form.hbs
 {% highlight html %}
+{% raw %}
 {{input value=title}}
 <br/>
 {{textarea value=body}}
 <br/>
 <button {{action 'save'}}>Save</button>
+{% endraw %}
 {% endhighlight %}
 
 Write the save action in the post-form component and that method will be  called
