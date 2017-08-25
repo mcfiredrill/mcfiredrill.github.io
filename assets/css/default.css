@@ -1,3 +1,10 @@
+@font-face  {
+  font-family: 'Debussy';
+  src: url('debussy.eot'); /* IE9 Compat Modes */
+  src: url('debussy.woff') format('woff'), /* Pretty Modern Browsers */
+       url('debussy.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
 html, body, div, span, applet, object, iframe, caption, p {
   margin: 0 0 0 0;
   border: 0 0 0 0;
