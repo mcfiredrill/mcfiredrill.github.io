@@ -1,8 +1,8 @@
 @font-face  {
   font-family: 'Debussy';
-  src: url('debussy.eot'); /* IE9 Compat Modes */
-  src: url('debussy.woff') format('woff'), /* Pretty Modern Browsers */
-       url('debussy.ttf')  format('truetype'); /* Safari, Android, iOS */
+  src: url('/assets/fonts/debussy.eot'); /* IE9 Compat Modes */
+  src: url('/assets/fonts/debussy.woff') format('woff'), /* Pretty Modern Browsers */
+       url('/assets/fonts/debussy.ttf')  format('truetype'); /* Safari, Android, iOS */
 }
 
 html, body, div, span, applet, object, iframe, caption, p {
