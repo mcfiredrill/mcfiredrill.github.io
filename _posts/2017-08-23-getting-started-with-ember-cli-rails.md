@@ -102,7 +102,7 @@ export default Ember.Route.extend({
 # JSONAPI
 
 By default ember uses and expects the server to return json formatted according
-to the JSONAPI spec.
+to the [JSONAPI](http://jsonapi.org/) spec.
 
 ## kabab case
 JSONAPI uses kabab-case instead of snake_case. Rails doesn't expect json to be
