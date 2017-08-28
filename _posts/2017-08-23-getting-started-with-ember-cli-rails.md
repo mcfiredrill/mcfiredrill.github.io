@@ -58,10 +58,14 @@ Visit  "/" and now ember is rendering!
 ## Setting up the ember routes
 
 Now we can set up the routing on the ember side of the app.
-Create the `posts` route in the ember app.
+You can create the model, route and template in ember by using `ember g resource` as follows.
 
 {% highlight bash %}
- ~/src/ember_rails_test/frontend(master)$ ember g route posts
+ ~/src/ember_cli_rails_example/frontend(emberize)$ ember g resource posts title:string body:string
+installing model
+  create app/models/post.js
+installing model-test
+  create tests/unit/models/post-test.js
 installing route
   create app/routes/posts.js
   create app/templates/posts.hbs
@@ -110,6 +114,13 @@ to the [JSONAPI](http://jsonapi.org/) spec.
 JSONAPI uses kebab-case (dash-case) instead of snake_case. Rails doesn't expect json to be
 formatted this way, so we can use the [active-model-adapter](https://github.com/ember-data/active-model-adapter) ember addon to transform our json payloads.
 
+Create this initializer to have Active Model Serializers render json in JSONAPI
+format.
+{% highlight ruby %}
+# config/initializers/jsonapi.rb
+ActiveModelSerializers.config.adapter = :json_api
+{% endhighlight %}
+
 Install the addon.
 {% highlight bash %}
 $ ember install active-model-adapter
@@ -124,6 +135,21 @@ export default ActiveModelAdapter.extend();
 {% endhighlight %}
 
 # Load posts
+
+We need to create a serializer for to tell Active Model Serializers what json to render for Posts.
+
+{% highlight bash %}
+$ rails g serializer post
+  create  app/serializers/post_serializer.rb
+{% endhighlight %}
+
+Add the `title` and `body` attributes to the serializer.
+{% highlight ruby %}
+# app/serializers/post_serializer.rb
+class PostSerializer < ActiveModel::Serializer
+  attributes :id, :title, :body
+end
+{% endhighlight %}
 
 Make the index action for the PostsController in rails look like this:
 {% highlight ruby %}
