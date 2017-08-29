@@ -75,7 +75,7 @@ installing route-test
   create tests/unit/routes/posts-test.js
 {% endhighlight %}
 
-I made the path for the posts route "/", just for convience.
+I made the path for the posts route "/", just for convenience.
 
 {% highlight javascript %}
 import Ember from 'ember';
@@ -262,7 +262,7 @@ something that looks more like this:
 
 First of all, rails does not understand the `application/vnd.api+json` mime type
 out of the box. If you try to debug the controller and inspect the parameters
-you'll just see an empty hash. Wo we should add this code to
+you'll just see an empty hash. We we should add this code to
 `config/initializers/mime_types.rb`:
 {% highlight ruby %}
 api_mime_type = %W(
@@ -285,7 +285,8 @@ JSONAPI formatted parameters correctly.
 {% endhighlight %}
 
 The `only` option for `jsonapi_parse` works similar to the whitelist in rails'
-strong parameters.
+strong parameters, disallowing any parameters that are not explicitly listed to
+come through.
 
 Now the form should be working correctly.
 
