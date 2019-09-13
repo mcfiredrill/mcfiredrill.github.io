@@ -51,6 +51,22 @@ This really blow my mind. I encountered the isuses described in the talk often,
 but never thought they could be solved in this way. I hope these patterns get
 merged into ember itself eventually, since they seem to be so common.
 
+All you have to do to use it with fastboot is [add the mixin to your application
+adapter](https://embermap.github.io/ember-data-storefront/docs/guides/fastboot<Paste>):
+```javascript
+// app/adpaters/application.js
+
+import JSONAPIAdapter from 'ember-data/adapters/json-api';
+import FastbootAdapter from 'ember-data-storefront/mixins/fastboot-adapter';
+
+export default JSONAPIAdapter.extend(
+  FastbootAdapter, {
+
+  // ...
+
+});
+```
+
 ### Rehydration
 
 [Rehydration](https://github.com/ember-fastboot/ember-cli-fastboot#rehydration) is an experimental feature that may render the above methods for dealing with the shoebox obselete. I haven't tried to yet, but follow the above link if you are interested in trying it out.
