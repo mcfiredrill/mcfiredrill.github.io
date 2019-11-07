@@ -74,3 +74,5 @@ application.
 ### Rehydration
 
 [Rehydration](https://github.com/ember-fastboot/ember-cli-fastboot#rehydration) is an experimental feature that may render the above methods for dealing with the shoebox obselete. I haven't tried to yet, but follow the above link if you are interested in trying it out.
+
+{% include ember_mailchimp.html %}
